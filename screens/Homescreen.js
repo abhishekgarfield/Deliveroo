@@ -1,4 +1,4 @@
-import { Text ,View ,StyleSheet, SafeAreaView} from "react-native";
+import { Text ,View ,StyleSheet, SafeAreaView ,Image,Platform,StatusBar}  from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 
@@ -10,22 +10,52 @@ const Homescreen=()=>{
             {headerShown:false}
         );
     },[])
-    return(
-        <SafeAreaView>   
-        <View>
-            <Text style={styles.myState}>Homescreen</Text>
+    return (
+      <SafeAreaView style={styles.droidsafearea}>
+        <View style={styles.header}>
+          {/* Header */}
+            <View>
+                <Image
+                source={{
+                    uri: "https://links.papareact.com/wru",
+                }}
+                style={styles.dp}
+                />
+            </View>
+            <View>
+                <Text >Deliver now !</Text>
+                <Text>Current location</Text>
+            </View>
         </View>
-        </SafeAreaView>
-
+      </SafeAreaView>
     );
 }
 const styles = StyleSheet.create ({
-    myState: {
-        marginTop:20,
-       color: 'red',
-       fontWeight: 'bold',
-       fontSize: 20
+   droidsafearea: {
+    paddingTop: Platform.OS==="android" ? StatusBar.currentHeight : 0
+   },
+    dp: {
+        height:30,
+        width:30,
+        padding:4,
+        backgroundColor:"lightgrey",
+        borderRadius:50
+    },
+    header:{
+        flexDirection:"row",
+    },
+    deliverText:
+    {
+        fontSize:"small",
+        fontWeight:"bold",
+        color:"lightgrey"
+    },
+    currentLocationtext:{
+        fontWeight:"bold",
+        fontSize:"large"
     }
+
+
   })
 
 export default Homescreen;
