@@ -5,6 +5,7 @@ import {
     ChevronDownIcon, UserIcon ,SearchIcon,AdjustmentsHorizontalIcon, MagnifyingGlassIcon
 } from "react-native-heroicons/outline";
 import Categories from "../Components/categories";
+import FeaturedRow from "../Components/featuredrow";
 
 
 
@@ -48,8 +49,31 @@ const Homescreen=()=>{
             </View>
             {/* offers */}
             <ScrollView>
-                {/* offers */}
+                {/* categories */}
+
                 <Categories />
+
+                {/* featured */}
+
+                < FeaturedRow
+                title={"featured"}
+                description={"Paid placements from our partners"}
+                id={123}/>
+
+                {/* Tasty discounts */}
+
+                < FeaturedRow
+                title={"tasty discounts"}
+                description={"every one's been enjoying these juicy discounts"}
+                id={1234}/>
+
+                {/* offers near you  */}
+
+                < FeaturedRow
+                title={"Offers near you"}
+                description={"Why not support your local restaurants near by"}
+                id={12345}/>
+
             </ScrollView>
       </SafeAreaView>
     );
@@ -85,8 +109,5 @@ const styles = StyleSheet.create ({
         fontSize:15,
         alignItems:"center"
     }
-
-
   })
-
 export default Homescreen;

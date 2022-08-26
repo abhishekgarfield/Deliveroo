@@ -5,20 +5,21 @@ import CategoriesCard from "./catogoriesCard";
 const Categories= () =>{
     return(
         <ScrollView
+        style={{margin:5}}
         horizontal
         showsVerticalScrollIndicator={false} >
-            <CategoriesCard url={"https://links.papareact.com/wru"} title={"testing 1 "}/>
-            <CategoriesCard url={"https://links.papareact.com/wru"} title={"testing 2 "}/>
-            <CategoriesCard url={"https://links.papareact.com/wru"} title={"testing 3 "}/>
-            <CategoriesCard url={"https://links.papareact.com/wru"} title={"testing 4 "}/>
-            <CategoriesCard url={"https://links.papareact.com/wru"} title={"testing 5 "}/>
-            <CategoriesCard url={"https://links.papareact.com/wru"} title={"testing 6 "}/>
-            <CategoriesCard url={"https://links.papareact.com/wru"} title={"testing 1 "}/>
-            <CategoriesCard url={"https://links.papareact.com/wru"} title={"testing 2 "}/>
-            <CategoriesCard url={"https://links.papareact.com/wru"} title={"testing 3 "}/>
-            <CategoriesCard url={"https://links.papareact.com/wru"} title={"testing 4 "}/>
-            <CategoriesCard url={"https://links.papareact.com/wru"} title={"testing 5 "}/>
-            <CategoriesCard url={"https://links.papareact.com/wru"} title={"testing 6 "}/>
+            <CategoriesCard url={"https://links.papareact.com/gn7"} title={"testing 1 "}/>
+            <CategoriesCard url={"https://links.papareact.com/gn7"} title={"testing 2 "}/>
+            <CategoriesCard url={"https://links.papareact.com/gn7"} title={"testing 3 "}/>
+            <CategoriesCard url={"https://links.papareact.com/gn7"} title={"testing 4 "}/>
+            <CategoriesCard url={"https://links.papareact.com/gn7"} title={"testing 5 "}/>
+            <CategoriesCard url={"https://links.papareact.com/gn7"} title={"testing 6 "}/>
+            <CategoriesCard url={"https://links.papareact.com/gn7"} title={"testing 1 "}/>
+            <CategoriesCard url={"https://links.papareact.com/gn7"} title={"testing 2 "}/>
+            <CategoriesCard url={"https://links.papareact.com/gn7"} title={"testing 3 "}/>
+            <CategoriesCard url={"https://links.papareact.com/gn7"} title={"testing 4 "}/>
+            <CategoriesCard url={"https://links.papareact.com/gn7"} title={"testing 5 "}/>
+            <CategoriesCard url={"https://links.papareact.com/gn7"} title={"testing 6 "}/>
         </ScrollView>
     );
 }
