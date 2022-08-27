@@ -7,7 +7,7 @@ const FeaturedRow=({title,description,id})=>{
     const[restaurant,setRestaurant]=useState({
         id:1234,
         imgUrl:"https://links.papareact.com/gn7",
-        title:"Nandos",
+        title:"",
         rating:4.5,
         genre:"japnese",
         address:"vill chhatru devi",
