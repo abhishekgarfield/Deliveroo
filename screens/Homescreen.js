@@ -40,17 +40,17 @@ const Homescreen=()=>{
             </View>
             {/* search box */}
             <View style={{flexDirection:"row",margin:3,paddingHorizontal:5}}>
-                <View style={{flexDirection:"row",flexGrow:1 ,backgroundColor:"lightgrey" ,alignItems:"center",borderRadius:5}}>
+                <View style={{flexDirection:"row",flexGrow:1 ,flexBasis:80,backgroundColor:"lightgrey" ,alignItems:"center",borderRadius:5}}>
                     <MagnifyingGlassIcon size={20} style={{color:"skyblue",marginHorizontal:3}}/>
                     <TextInput placeholder="Restaurents and cousines"
-                    keyboardType="default"   />
+                    keyboardType="default" style={{flexBasis:100,flexGrow:1}}   />
                 </View>
                 <AdjustmentsHorizontalIcon size={33} style={{color:"skyblue",width:"inherit",marginLeft:2}}/>
             </View>
             {/* offers */}
             <ScrollView 
             contentContainerStyle={{
-                paddingBottom:40
+                paddingBottom:70
             }}>
                 {/* categories */}
 
