@@ -7,7 +7,7 @@ const Categories= () =>{
         <ScrollView
         style={{margin:5}}
         horizontal
-        showsVerticalScrollIndicator={false} >
+        showsHorizontalScrollIndicator={false} >
             <CategoriesCard url={"https://links.papareact.com/gn7"} title={"testing 1 "}/>
             <CategoriesCard url={"https://links.papareact.com/gn7"} title={"testing 2 "}/>
             <CategoriesCard url={"https://links.papareact.com/gn7"} title={"testing 3 "}/>

@@ -19,7 +19,7 @@ const FeaturedRow=({title,description,id})=>{
     return (
       <View style={{marginHorizontal:5}}>
         <View style={{ flexDirection: "row", justifyContent: "space-between" , margin:2}}>
-          <Text style={{fontWeight:"bold"}}>{title}</Text>
+          <Text style={{fontWeight:"bold",fontSize:17}}>{title}</Text>
           <ArrowRightIcon style={{ color: "green" }} size={15} />
         </View>
         <Text style={styles.des}>{description}</Text>
@@ -37,7 +37,7 @@ const FeaturedRow=({title,description,id})=>{
 const styles=StyleSheet.create({
     des:{
         color:"lightgrey",
-        fontSize:10,
+        fontSize:11,
         margin:2,
         fontWeight:"bold"
         

@@ -5,7 +5,7 @@ const CategoriesCard= ({url,title}) =>{
     return(
         <View>
         <TouchableOpacity>
-            <Image source={{uri:url}} style={{height:50,width:50, marginHorizontal:5}}/>
+            <Image source={{uri:url}} style={{height:70,width:70, marginHorizontal:5}}/>
         </TouchableOpacity>
         <Text style={{position:"absolute",bottom:0,color:"white"}}>{title}</Text>
         </View>

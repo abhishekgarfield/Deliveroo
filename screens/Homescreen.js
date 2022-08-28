@@ -2,7 +2,7 @@ import { Text ,View ,StyleSheet, SafeAreaView ,Image,Platform,StatusBar,TextInpu
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import {
-    ChevronDownIcon, UserIcon ,SearchIcon,AdjustmentsHorizontalIcon, MagnifyingGlassIcon
+    ChevronDownIcon, UserIcon ,AdjustmentsHorizontalIcon, MagnifyingGlassIcon
 } from "react-native-heroicons/outline";
 import Categories from "../Components/categories";
 import FeaturedRow from "../Components/featuredrow";
@@ -41,11 +41,11 @@ const Homescreen=()=>{
             {/* search box */}
             <View style={{flexDirection:"row",margin:3,paddingHorizontal:5}}>
                 <View style={{flexDirection:"row",flexGrow:1 ,backgroundColor:"lightgrey" ,alignItems:"center"}}>
-                    <MagnifyingGlassIcon size={15} style={{color:"skyblue",marginHorizontal:3}}/>
+                    <MagnifyingGlassIcon size={20} style={{color:"skyblue",marginHorizontal:3}}/>
                     <TextInput placeholder="Restaurents and cousines"
-                    keyboardType="default" />
+                    keyboardType="default"   />
                 </View>
-                <AdjustmentsHorizontalIcon size={20} style={{color:"skyblue",width:"inherit",marginLeft:2}}/>
+                <AdjustmentsHorizontalIcon size={33} style={{color:"skyblue",width:"inherit",marginLeft:2}}/>
             </View>
             {/* offers */}
             <ScrollView>
@@ -56,14 +56,14 @@ const Homescreen=()=>{
                 {/* featured */}
 
                 < FeaturedRow
-                title={"featured"}
+                title={"Featured"}
                 description={"Paid placements from our partners"}
                 id={123}/>
 
                 {/* Tasty discounts */}
 
                 < FeaturedRow
-                title={"tasty discounts"}
+                title={"Tasty discounts"}
                 description={"every one's been enjoying these juicy discounts"}
                 id={1234}/>
 
@@ -85,8 +85,8 @@ const styles = StyleSheet.create ({
    },
     dp: 
     {
-        height:30,
-        width:30,
+        height:35,
+        width:35,
         padding:4,
         backgroundColor:"lightgrey",
         borderRadius:50
