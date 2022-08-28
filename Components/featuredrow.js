@@ -20,7 +20,7 @@ const FeaturedRow=({title,description,id})=>{
       <View>
         <View style={{ flexDirection: "row", justifyContent: "space-between" , margin:2}}>
           <Text style={{fontWeight:"bold",fontSize:17,marginHorizontal:5}}>{title}</Text>
-          <ArrowRightIcon style={{ color: "green" }} size={15} />
+          <ArrowRightIcon style={{ color: "green" , marginRight:5}} size={15} />
         </View>
         <Text style={styles.des}>{description}</Text>
         <ScrollView
