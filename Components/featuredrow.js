@@ -7,7 +7,7 @@ const FeaturedRow=({title,description,id})=>{
     const[restaurant,setRestaurant]=useState({
         id:1234,
         imgUrl:"https://links.papareact.com/gn7",
-        title:"",
+        title:"Yo! sushi",
         rating:4.5,
         genre:"japnese",
         address:"vill chhatru devi",
@@ -17,9 +17,9 @@ const FeaturedRow=({title,description,id})=>{
         lat:0
     });
     return (
-      <View style={{marginHorizontal:5}}>
+      <View style={{}}>
         <View style={{ flexDirection: "row", justifyContent: "space-between" , margin:2}}>
-          <Text style={{fontWeight:"bold",fontSize:17}}>{title}</Text>
+          <Text style={{fontWeight:"bold",fontSize:17,marginHorizontal:5}}>{title}</Text>
           <ArrowRightIcon style={{ color: "green" }} size={15} />
         </View>
         <Text style={styles.des}>{description}</Text>
@@ -39,8 +39,8 @@ const styles=StyleSheet.create({
         color:"lightgrey",
         fontSize:11,
         margin:2,
-        fontWeight:"bold"
-        
+        fontWeight:"bold",
+        marginHorizontal:7
     }
 })
 export default FeaturedRow;

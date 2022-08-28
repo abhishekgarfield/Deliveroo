@@ -48,7 +48,10 @@ const Homescreen=()=>{
                 <AdjustmentsHorizontalIcon size={33} style={{color:"skyblue",width:"inherit",marginLeft:2}}/>
             </View>
             {/* offers */}
-            <ScrollView>
+            <ScrollView 
+            contentContainerStyle={{
+                paddingBottom:40
+            }}>
                 {/* categories */}
 
                 <Categories />
