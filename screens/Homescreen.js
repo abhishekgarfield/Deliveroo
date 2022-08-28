@@ -40,7 +40,7 @@ const Homescreen=()=>{
             </View>
             {/* search box */}
             <View style={{flexDirection:"row",margin:3,paddingHorizontal:5}}>
-                <View style={{flexDirection:"row",flexGrow:1 ,backgroundColor:"lightgrey" ,alignItems:"center"}}>
+                <View style={{flexDirection:"row",flexGrow:1 ,backgroundColor:"lightgrey" ,alignItems:"center",borderRadius:5}}>
                     <MagnifyingGlassIcon size={20} style={{color:"skyblue",marginHorizontal:3}}/>
                     <TextInput placeholder="Restaurents and cousines"
                     keyboardType="default"   />

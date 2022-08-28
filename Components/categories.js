@@ -5,7 +5,7 @@ import CategoriesCard from "./catogoriesCard";
 const Categories= () =>{
     return(
         <ScrollView
-        style={{margin:5}}
+        style={{marginVertical:5,marginLeft:2}}
         horizontal
         showsHorizontalScrollIndicator={false} >
             <CategoriesCard url={"https://links.papareact.com/gn7"} title={"testing 1 "}/>

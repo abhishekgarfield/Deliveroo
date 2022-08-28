@@ -29,6 +29,8 @@ const FeaturedRow=({title,description,id})=>{
 
             {/* Restaurant cards */}
             <RestaurantCard restaurant={restaurant}/>
+            <RestaurantCard restaurant={restaurant}/>
+            <RestaurantCard restaurant={restaurant}/>
         </ScrollView>
       </View>
     );
