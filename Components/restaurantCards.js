@@ -4,7 +4,7 @@ import { LocationMarkerIcon, MapPinIcon } from "react-native-heroicons/outline";
 import { StarIcon } from "react-native-heroicons/solid";
 const RestaurantCard=({restaurant})=>{
     return (
-      <View style={{ width: 285, height: 260,backgroundColor:"white", shadowColor:"black",shadowOpacity:0.4,shadowOffset:{height:0,width:0},shadowRadius:6,marginVertical:10,marginHorizontal:7}}>
+      <View style={{ width: 285, height: 260,backgroundColor:"white", shadowColor:"black",shadowOpacity:0.4,shadowOffset:{height:0,width:0},shadowRadius:6,marginVertical:10,marginHorizontal:7,elevation:4}}>
         <View>
           <View>
             <Image
