@@ -1,10 +1,10 @@
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { LocationMarkerIcon, MapPinIcon } from "react-native-heroicons/outline";
 import { StarIcon } from "react-native-heroicons/solid";
 const RestaurantCard=({restaurant})=>{
     return (
-      <View style={{ width: 285, height: 260,backgroundColor:"white", shadowColor:"black",shadowOpacity:0.4,shadowOffset:{height:0,width:0},shadowRadius:6,marginVertical:10,marginHorizontal:7,elevation:4}}>
+      <TouchableOpacity style={{ width: 285, height: 260,backgroundColor:"white", shadowColor:"black",shadowOpacity:0.4,shadowOffset:{height:0,width:0},shadowRadius:6,marginVertical:10,marginHorizontal:7,elevation:4}}>
         <View>
           <View>
             <Image
@@ -27,7 +27,7 @@ const RestaurantCard=({restaurant})=>{
             </View>
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
     );
 }
 

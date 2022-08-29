@@ -1,5 +1,5 @@
 import { Text ,View ,StyleSheet, SafeAreaView ,Image,Platform,StatusBar,TextInput, ScrollView}  from "react-native";
-import React, { useLayoutEffect } from "react";
+import React, {  useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import {
     ChevronDownIcon, UserIcon ,AdjustmentsHorizontalIcon, MagnifyingGlassIcon
@@ -11,6 +11,7 @@ import FeaturedRow from "../Components/featuredrow";
 
 const Homescreen=()=>{
     const navigation=useNavigation();
+   
     useLayoutEffect(()=>{
         navigation.setOptions(
             {headerShown:false}

@@ -1,21 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View ,Text ,Scrollview ,Image, StyleSheet, ScrollView } from "react-native";
 import { ArrowRightIcon } from "react-native-heroicons/outline";
 import RestaurantCard from "./restaurantCards";
+import axios from "axios";
 
 const FeaturedRow=({title,description,id})=>{
-    const[restaurant,setRestaurant]=useState({
-        id:1234,
-        imgUrl:"https://links.papareact.com/gn7",
-        title:"Yo! sushi",
-        rating:4.5,
-        genre:"japnese",
-        address:"vill chhatru devi",
-        short_description:"hi this is a restaurant",
-        dishes:[],
-        long:20,
-        lat:0
-    });
+  const [restaurants,setRestaurants]=useState([]);
+
+  const getrestaurantData=async ()=>{
+    console.log("making request");
+         const response= await axios.get("http://localhost:8000/restaurant");
+         setRestaurants(response.data);
+  }
+          useEffect(()=>{
+            getrestaurantData();
+        },[])
+        
+   
     return (
       <View>
         <View style={{ flexDirection: "row", justifyContent: "space-between" , margin:2}}>
@@ -29,9 +30,9 @@ const FeaturedRow=({title,description,id})=>{
         >
 
             {/* Restaurant cards */}
-            <RestaurantCard restaurant={restaurant}/>
-            <RestaurantCard restaurant={restaurant}/>
-            <RestaurantCard restaurant={restaurant}/>
+           {restaurants?.map((item ,index) =>
+                <RestaurantCard restaurant={item} key={index} />
+            )}
         </ScrollView>
       </View>
     );
