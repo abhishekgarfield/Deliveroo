@@ -4,12 +4,16 @@ import { ArrowRightIcon } from "react-native-heroicons/outline";
 import RestaurantCard from "./restaurantCards";
 import axios from "axios";
 
-const FeaturedRow=({title,description,id})=>{
+const FeaturedRow=({item})=>{
   const [restaurants,setRestaurants]=useState([]);
 
   const getrestaurantData=async ()=>{
-    console.log("making request");
-         const response= await axios.get("http://localhost:8000/restaurant");
+         const response= await axios.get("http://localhost:8000/restaurant",{
+          
+          params:{
+
+         featured_id: item.featured_id}
+          });
          setRestaurants(response.data);
   }
           useEffect(()=>{
@@ -20,10 +24,10 @@ const FeaturedRow=({title,description,id})=>{
     return (
       <View>
         <View style={{ flexDirection: "row", justifyContent: "space-between" , margin:2}}>
-          <Text style={{fontWeight:"bold",fontSize:17,marginHorizontal:5}}>{title}</Text>
+          <Text style={{fontWeight:"bold",fontSize:17,marginHorizontal:5}}>{item.title}</Text>
           <ArrowRightIcon style={{ color: "green" , marginRight:5}} size={15} />
         </View>
-        <Text style={styles.des}>{description}</Text>
+        <Text style={styles.des}>{item.description}</Text>
         <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}

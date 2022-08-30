@@ -1,5 +1,5 @@
 import { Text ,View ,StyleSheet, SafeAreaView ,Image,Platform,StatusBar,TextInput, ScrollView}  from "react-native";
-import React, {  useLayoutEffect, useState } from "react";
+import React, {  useEffect, useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import {
     ChevronDownIcon, UserIcon ,AdjustmentsHorizontalIcon, MagnifyingGlassIcon
@@ -11,11 +11,37 @@ import FeaturedRow from "../Components/featuredrow";
 
 const Homescreen=()=>{
     const navigation=useNavigation();
+   const[categories,setCategories]=useState([]);
+   const[featuredRows,setfeaturedRows]=useState([]);
+   const getCatogries = async ()=>{
+    const response= await fetch("http://localhost:8000/categories");
+    if(response.status==404)
+    {
+        return;
+    }
+    else{
+    setCategories(await response.json());
+    }
+   }
+   const getFeaturedRow= async()=>{
+    const response= await fetch("http://localhost:8000/featuredrow");
+    if(response.status==404)
+    {
+        return;
+    }
+    else{
+        setfeaturedRows(await response.json());
+    }
+   }
    
     useLayoutEffect(()=>{
         navigation.setOptions(
             {headerShown:false}
         );
+    },[])
+    useEffect(()=>{
+        getCatogries();
+        getFeaturedRow();
     },[])
     return (
       <SafeAreaView style={styles.droidsafearea}>
@@ -54,29 +80,20 @@ const Homescreen=()=>{
                 paddingBottom:70
             }}>
                 {/* categories */}
-
-                <Categories />
+                <ScrollView
+                style={{marginVertical:5,marginLeft:2}}
+                horizontal
+                showsHorizontalScrollIndicator={false} >
+                {categories?.map((item,index)=>
+                    <Categories item={item} key={index}/>
+                )}
+                </ScrollView>
 
                 {/* featured */}
-
-                < FeaturedRow
-                title={"Featured"}
-                description={"Paid placements from our partners"}
-                id={123}/>
-
-                {/* Tasty discounts */}
-
-                < FeaturedRow
-                title={"Tasty discounts"}
-                description={"every one's been enjoying these juicy discounts"}
-                id={1234}/>
-
-                {/* offers near you  */}
-
-                < FeaturedRow
-                title={"Offers near you"}
-                description={"Why not support your local restaurants near by"}
-                id={12345}/>
+                {featuredRows?.map((item,index)=>{
+                    return <FeaturedRow item={item} key={index}/>
+                })}
+                
 
             </ScrollView>
       </SafeAreaView>

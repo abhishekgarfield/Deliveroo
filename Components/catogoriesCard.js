@@ -1,14 +1,13 @@
 import { Image,  Text,TouchableOpacity,View } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 
-const CategoriesCard= ({url,title}) =>{
+const CategoriesCard= ({item}) =>{
+   
     return(
-        <View>
-        <TouchableOpacity>
-            <Image source={{uri:url}} style={{height:70,width:70, marginHorizontal:5}}/>
+        <TouchableOpacity style={{display:"flex",alignItems:"center"}}>
+            <Image source={{uri:item.category_image}} style={{height:70,width:70, marginHorizontal:5}}/>
+            <Text style={{position:"absolute",color:"white",bottom:0,fontWeight:"bold"}}>{item.category_title}</Text>
         </TouchableOpacity>
-        <Text style={{position:"absolute",bottom:0,color:"white"}}>{title}</Text>
-        </View>
     );
 }
 export default CategoriesCard;
