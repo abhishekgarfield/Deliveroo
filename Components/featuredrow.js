@@ -9,10 +9,12 @@ import {
 } from "react-native";
 import { ArrowRightIcon } from "react-native-heroicons/outline";
 import RestaurantCard from "./restaurantCards";
-import axios from "axios";
+import axios from "axios"; 
+import { useNavigation } from "@react-navigation/native";
 
 const FeaturedRow = ({ item }) => {
   const [restaurants, setRestaurants] = useState([]);
+  const navigation=useNavigation();
 
   const getrestaurantData = async () => {
     try {

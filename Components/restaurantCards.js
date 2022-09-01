@@ -1,10 +1,19 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { LocationMarkerIcon, MapPinIcon } from "react-native-heroicons/outline";
 import { StarIcon } from "react-native-heroicons/solid";
 const RestaurantCard=({restaurant})=>{
+  const navigation=useNavigation();
+
     return (
       <TouchableOpacity
+      onPress={(e)=>{
+        console.log("restaurant press");
+      navigation.navigate("restaurant",{
+        restaurant:restaurant
+      });
+      }}
         style={{
           width: 285,
           height: 260,
