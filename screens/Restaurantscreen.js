@@ -31,22 +31,26 @@ const Restaurantscreen=()=>{
             </View>
             <View style={{color:"grey",marginTop:5}}>
                 <Text style={styles.txt}>{`${restaurant.title}`}</Text>
-                <View style={{flexDirection:"row",paddingHorizontal:3,alignItems:"center",color:"grey",marginLeft:5}}>
-                    <StarIcon size={12}color="grey"/>
+                <View style={{flexDirection:"row",paddingHorizontal:5,alignItems:"center",color:"grey",marginLeft:5,paddingVertical:1}}>
+                    <StarIcon size={18}color="grey"/>
                     <Text style={{color:"grey"}}>{` ${restaurant.rating} `}</Text>
-                    <MapPinIcon size={20} color="grey"/>
+                    <MapPinIcon size={19} color="grey"/>
                     <Text style={{color:"grey"}}>{` nearby ${restaurant.address}`}</Text>
                 </View>
                 <View>
-                    <Text style={{fontSize:15,paddingHorizontal:3,color:"grey",marginLeft:5,marginBottom:3}}>
+                    <Text style={{fontSize:15,paddingHorizontal:5,paddingVertical:1,color:"grey",marginLeft:5,marginBottom:3}}>
                         {
                             restaurant.short_description
-
                         }
                     </Text>
                 </View>
-                <View style={{backgroundColor:"lightgrey",marginTop:5}}>
-                    <Text style={{fontWeight:"bold",fontSize:20,marginVertical:15,marginLeft:5}}>
+                <View style={{marginTop:5,borderTopWidth:0.5,borderBottomWidth:0.5,borderStyle:""}}>
+                    <Text style={{fontWeight:"bold",fontSize:16,marginVertical:15,marginLeft:10}}>
+                        Have a food allergy ?
+                    </Text>
+                </View>
+                <View style={{backgroundColor:"lightgrey"}}>
+                    <Text style={{fontWeight:"bold",fontSize:20,marginVertical:15,marginLeft:10}}>
                         Menu
                     </Text>
                 </View>
@@ -60,7 +64,8 @@ const styles=StyleSheet.create({
  txt:{
 fontSize:25,
 fontWeight:"bold",
-paddingHorizontal:3,
+paddingHorizontal:5,
+paddingVertical:2,
 marginLeft:5
  }
 })
