@@ -45,7 +45,7 @@ const RestaurantCard=({restaurant})=>{
                 marginVertical: 2,
               }}
             >
-              <StarIcon size={15} style={{ color: "green", opacity: 1 }} />
+              <StarIcon size={15} style={{ color: "green" }} />
               <Text style={{ color: "green" }}> {restaurant.rating} </Text>
               <Text style={{ color: "grey" }}>{restaurant.genre} </Text>
             </View>
