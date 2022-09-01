@@ -26,7 +26,7 @@ const Homescreen = () => {
   const [featuredRows, setfeaturedRows] = useState([]);
   const getCatogries = async () => {
     try {
-      const response = await fetch("http://192.168.0.5:8000/categories");
+      const response = await fetch("http://172.20.10.2:8000/categories");
       if (response.status == 404) {
         return;
       } else {
@@ -38,7 +38,7 @@ const Homescreen = () => {
   };
   const getFeaturedRow = async () => {
     try {
-      const response = await fetch("http://192.168.0.5:8000/featuredrow");
+      const response = await fetch("http://172.20.10.2:8000/featuredrow");
       if (response.status == 404) {
         return;
       } else {
