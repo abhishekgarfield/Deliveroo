@@ -1,10 +1,22 @@
 import { useEffect, useState } from "react";
 import { Text, View, Image, TouchableOpacity, TextInput, TouchableWithoutFeedback, StyleSheet } from "react-native";
 import { MinusIcon, PlusIcon } from "react-native-heroicons/solid";
+import { useDispatch, useSelector } from "react-redux";
+import { addtoBasket, removeFromBasket } from "../fetures/basketSlice";
 
 
 const Dishcard=({dish})=>{
     const[isPressed,setIspressed]=useState(false);
+    const dispatch =useDispatch();
+    const items=useSelector((state)=>state.basket.items)
+
+    const additemtobasket=()=>{
+      dispatch(addtoBasket(dish));
+    }
+    const removeitemfrombasket=()=>{
+      dispatch(removeFromBasket(dish))
+    }
+    
     return (
       <TouchableWithoutFeedback
         onPress={(e) => {
@@ -25,30 +37,37 @@ const Dishcard=({dish})=>{
               style={{ padding: 3, color: "grey" ,marginBottom:5}}
             >{`₹${dish.Price}`}</Text>
             {isPressed && (
-              <View style={{ flexDirection: "row", padding: 3 }}>
+              <View style={{ flexDirection: "row", padding: 3 ,alignItems:"center"}}>
                 <TouchableOpacity
                   style={{
                     backgroundColor: "rgb(126, 247, 222)",
                     padding: 10,
-                    borderRadius: 50,
+                    borderRadius: 50
                   }}
+                  onPress={additemtobasket}
                 >
                   <PlusIcon
                     size={15}
                     style={{ color: "white", fontWeight: "bold" }}
+                    
                   />
                 </TouchableOpacity>
-                <TextInput
-                  style={{ width: 30, textAlign: "center" }}
-                  placeholder="0"
-                  editable={false}
-                />
+                <Text style={{ paddingHorizontal:5}}>
+                    {items.filter((item)=>{
+                      
+                        if(JSON.stringify(item)==JSON.stringify(dish))
+                        {
+                          return item;
+                        }
+                    }).length}
+                  </Text>
                 <TouchableOpacity
                   style={{
                     backgroundColor: "rgb(126, 247, 222)",
                     padding: 10,
                     borderRadius: 50,
                   }}
+                  onPress={removeitemfrombasket}
                 >
                   <MinusIcon
                     size={15}

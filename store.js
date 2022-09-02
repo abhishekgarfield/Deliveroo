@@ -1,17 +1,13 @@
-import { counter } from "@fortawesome/fontawesome-svg-core";
-import { configureStore } from "@reduxjs/toolkit";
 
-const Store = configureStore(
+import { configureStore } from "@reduxjs/toolkit";
+import basketReducer from "./fetures/basketSlice";
+
+export const store = configureStore(
     {
-        reducer:counter
+        reducer:{
+            basket:basketReducer,
+        }
     }
 )
 
-const counter=(state=0,action)=>
-{
- switch(action.type){
-    case "Increment":
-        return state+1
- }
-};
-
+;
