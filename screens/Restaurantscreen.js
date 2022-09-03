@@ -55,7 +55,7 @@ const Restaurantscreen = () => {
             navigation.goBack();
           }}
         >
-          <ArrowLeftIcon size={20} style={{ color: "rgb(126, 247, 222)" }} />
+          <ArrowLeftIcon size={20} style={{ color: "rgba(0,204,188,255)" }} />
         </TouchableOpacity>
       </View>
       <View style={{ color: "grey", marginTop: 5 }}>

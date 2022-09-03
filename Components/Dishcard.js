@@ -40,7 +40,7 @@ const Dishcard=({dish})=>{
               <View style={{ flexDirection: "row", padding: 3 ,alignItems:"center"}}>
                 <TouchableOpacity
                   style={{
-                    backgroundColor: "rgb(126, 247, 222)",
+                    backgroundColor: "rgba(0,204,188,255)",
                     padding: 10,
                     borderRadius: 50
                   }}
@@ -63,7 +63,7 @@ const Dishcard=({dish})=>{
                   </Text>
                 <TouchableOpacity
                   style={{
-                    backgroundColor: "rgb(126, 247, 222)",
+                    backgroundColor: "rgba(0,204,188,255)",
                     padding: 10,
                     borderRadius: 50,
                   }}

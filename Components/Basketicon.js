@@ -10,7 +10,7 @@ const Basketicon =()=>{
       <>
         {items.length>0 &&<TouchableOpacity
           style={{
-            backgroundColor: "rgb(126, 247, 222)",
+            backgroundColor: "rgba(0,204,188,255)",
             flexDirection: "row",
             position: "absolute",
             bottom: 30,
@@ -27,8 +27,9 @@ const Basketicon =()=>{
               fontSize: 17,
               fontWeight: "bold",
 
-              backgroundColor: "green",
-              padding:4
+              backgroundColor: "rgba(0,150,150,255)",
+              padding:4,
+              paddingHorizontal:6
             }}
           >
             {items.length}
