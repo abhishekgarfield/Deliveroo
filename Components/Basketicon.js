@@ -1,9 +1,11 @@
+import { useNavigation } from "@react-navigation/native";
 import { Text, TouchableOpacity } from "react-native";
 import { useSelector } from "react-redux";
 import { basketItemTotal } from "../fetures/basketSlice";
 
 const Basketicon = () => {
   const items = useSelector((state) => state.basket.items);
+  const navigation=useNavigation();
   const Total = useSelector(basketItemTotal);
   return (
     <>
@@ -18,6 +20,10 @@ const Basketicon = () => {
             alignItems: "center",
             marginHorizontal: 11,
             borderRadius: 10,
+            
+          }}
+          onPress={()=>{
+            navigation.navigate("basketscreen");
           }}
         >
           <Text

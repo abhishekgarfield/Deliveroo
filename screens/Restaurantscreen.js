@@ -36,7 +36,7 @@ const Restaurantscreen = () => {
 
   return (
     <>
-    <View>
+    <ScrollView>
       <View>
         <Image
           source={{ uri: restaurant.imgUrl }}
@@ -129,9 +129,11 @@ const Restaurantscreen = () => {
           </Text>
         </View>
       </View>
-    </View>
+    
     <ScrollView>
          <Menucard dishes={restaurant.dishes} />
+    </ScrollView>
+    
     </ScrollView>
     <View>
       <Basketicon/>
