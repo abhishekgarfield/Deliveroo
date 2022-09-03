@@ -37,5 +37,15 @@ export const basketSlice=createSlice(
 
 export const {addtoBasket,removeFromBasket}=basketSlice.actions;
 export const selectBasketItem =(state)=>state.basket.items;
+export const basketItemTotal=(state)=>{
+    var sum=0;
+    state.basket.items.forEach((element) => {
+    sum=sum+ parseInt(element.Price);
+    
+    console.log(element.Price)
+    console.log(`variable ${sum}`);
+    
+}
+);return sum;};
 export default basketSlice.reducer;
 

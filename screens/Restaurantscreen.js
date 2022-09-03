@@ -19,6 +19,7 @@ import {
   MapPinIcon,
   StarIcon,
 } from "react-native-heroicons/solid";
+import Basketicon from "../Components/Basketicon";
 import Menucard from "../Components/menucard";
 
 const Restaurantscreen = () => {
@@ -132,6 +133,9 @@ const Restaurantscreen = () => {
     <ScrollView>
          <Menucard dishes={restaurant.dishes} />
     </ScrollView>
+    <View>
+      <Basketicon/>
+    </View>
     </>
   );
 };
