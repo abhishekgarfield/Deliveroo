@@ -2,23 +2,22 @@ import { Text, TouchableOpacity } from "react-native";
 import { useSelector } from "react-redux";
 import { basketItemTotal } from "../fetures/basketSlice";
 
-const Basketicon =()=>{
-        const items=useSelector(state=>state.basket.items);
-        const Total=useSelector(basketItemTotal);
-        console.log(Total);
-    return (
-      <>
-        {items.length>0 &&<TouchableOpacity
+const Basketicon = () => {
+  const items = useSelector((state) => state.basket.items);
+  const Total = useSelector(basketItemTotal);
+  return (
+    <>
+      {items.length > 0 && (
+        <TouchableOpacity
           style={{
             backgroundColor: "rgba(0,204,188,255)",
             flexDirection: "row",
             position: "absolute",
             bottom: 30,
-            padding: 15,
+            padding: 20,
             alignItems: "center",
             marginHorizontal: 11,
             borderRadius: 10,
-            
           }}
         >
           <Text
@@ -28,8 +27,8 @@ const Basketicon =()=>{
               fontWeight: "bold",
 
               backgroundColor: "rgba(0,150,150,255)",
-              padding:4,
-              paddingHorizontal:6
+              padding: 4,
+              paddingHorizontal: 6,
             }}
           >
             {items.length}
@@ -41,8 +40,8 @@ const Basketicon =()=>{
               textAlign: "center",
               color: "white",
               fontSize: 17,
-              fontWeight: "bold",
-              padding:4
+              fontWeight: "900",
+              padding: 4,
             }}
           >
             View Basket
@@ -51,14 +50,15 @@ const Basketicon =()=>{
             style={{
               color: "white",
               fontSize: 17,
-              fontWeight: "bold",
-              padding:4
+              fontWeight: "900",
+              padding: 4,
             }}
           >
-            {`₹ ${Total}`}
+            {`₹${Total}`}
           </Text>
-        </TouchableOpacity>}
-      </>
-    );
-}
+        </TouchableOpacity>
+      )}
+    </>
+  );
+};
 export default Basketicon;

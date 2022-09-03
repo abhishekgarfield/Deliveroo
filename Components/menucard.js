@@ -5,7 +5,10 @@ import Dishcard from "./Dishcard";
  const Menucard=({dishes})=>{
 
     return(
-        <ScrollView>
+        <ScrollView
+        contentContainerStyle={{
+            paddingBottom:120
+        }}>
             {dishes.map((item,index)=><Dishcard dish={item} key={index}/>)}
         </ScrollView>
     );
