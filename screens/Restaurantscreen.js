@@ -19,10 +19,14 @@ import {
   MapPinIcon,
   StarIcon,
 } from "react-native-heroicons/solid";
+import { useDispatch, useSelector } from "react-redux";
 import Basketicon from "../Components/Basketicon";
 import Menucard from "../Components/menucard";
+import { setRestaurant } from "../fetures/restaurantSlice";
+import {selectRestaurant } from "../fetures/restaurantSlice"
 
 const Restaurantscreen = () => {
+  const dispatch= useDispatch();
   const navigation = useNavigation();
   const {
     params: { restaurant },
@@ -33,6 +37,9 @@ const Restaurantscreen = () => {
       headerShown: false,
     });
   }, []);
+  useEffect(()=>{
+    
+  },)
 
   return (
     <>
@@ -131,7 +138,7 @@ const Restaurantscreen = () => {
       </View>
     
     <ScrollView>
-         <Menucard dishes={restaurant.dishes} />
+         <Menucard dishes={restaurant.dishes} title={restaurant.title} />
     </ScrollView>
     
     </ScrollView>

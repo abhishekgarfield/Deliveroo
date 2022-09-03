@@ -9,7 +9,6 @@ const RestaurantCard=({restaurant})=>{
     return (
       <TouchableOpacity
       onPress={(e)=>{
-        console.log("restaurant press");
       navigation.navigate("restaurant",{
         restaurant:restaurant
       });

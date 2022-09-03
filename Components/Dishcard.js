@@ -3,15 +3,25 @@ import { Text, View, Image, TouchableOpacity, TextInput, TouchableWithoutFeedbac
 import { MinusIcon, PlusIcon } from "react-native-heroicons/solid";
 import { useDispatch, useSelector } from "react-redux";
 import { addtoBasket, removeFromBasket } from "../fetures/basketSlice";
+import { setRestaurant } from "../fetures/restaurantSlice";
 
 
-const Dishcard=({dish})=>{
+const Dishcard=({dish,title})=>{
     const[isPressed,setIspressed]=useState(false);
     const dispatch =useDispatch();
     const items=useSelector((state)=>state.basket.items)
+    const restaurantname=useSelector((state)=>{return state.restaurant.restaurant.title})
+    console.log(restaurantname)
 
     const additemtobasket=()=>{
+      if(restaurantname===title || items.length==0)
+      {
       dispatch(addtoBasket(dish));
+      dispatch(setRestaurant(title));
+      }
+      else{
+        console.log("rest change");
+      }
     }
     const removeitemfrombasket=()=>{
       dispatch(removeFromBasket(dish))
