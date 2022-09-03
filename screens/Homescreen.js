@@ -21,12 +21,13 @@ import Categories from "../Components/categories";
 import FeaturedRow from "../Components/featuredrow";
 
 const Homescreen = () => {
+  const localhst="172.20.10.2"
   const navigation = useNavigation();
   const [categories, setCategories] = useState([]);
   const [featuredRows, setfeaturedRows] = useState([]);
   const getCatogries = async () => {
     try {
-      const response = await fetch("http://192.168.0.7:8000/categories");
+      const response = await fetch(`http://${localhst}:8000/categories`);
       if (response.status == 404) {
         return;
       } else {
@@ -38,7 +39,7 @@ const Homescreen = () => {
   };
   const getFeaturedRow = async () => {
     try {
-      const response = await fetch("http://192.168.0.7:8000/featuredrow");
+      const response = await fetch(`http://${localhst}:8000/featuredrow`);
       if (response.status == 404) {
         return;
       } else {
