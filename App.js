@@ -15,7 +15,8 @@ export default function App() {
         <Stack.Navigator>
           <Stack.Screen name="home" component={Homescreen} />
           <Stack.Screen name="restaurant" component={Restaurantscreen} />
-          <Stack.Screen name="basketscreen" component={Basketscreen} />
+          <Stack.Screen name="basketscreen" component={Basketscreen} 
+          options={{presentation:"modal", headerShown:false}}/>
         </Stack.Navigator>
       </Provider>
     </NavigationContainer>
