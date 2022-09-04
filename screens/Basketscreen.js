@@ -6,24 +6,26 @@ import { useSelector } from "react-redux";
 const Basketscreen = () => {
   const navigation = useNavigation();
   const items = useSelector((state) => state.basket.items);
-  const restaurantname = useSelector((state)=>state.restaurant.restaurant.title);
+  const restaurantname = useSelector(
+    (state) => state.restaurant.restaurant.title
+  );
   const [groupedItems, setGroupedItems] = useState([]);
   const groupdItems = () => {
     var temp = {};
     items.forEach((element) => {
-
-      console.log(element);
-      if (temp[id] = element.id) {
-        temp[id].push(element);
-       
-      }
-    })
+      if(!temp[element.Dish_id])
+      {
+           temp[element.Dish_id]=[]
+          }
+          temp[element.Dish_id].push(element);
+      
+    });
     console.log(temp);
-  }
+  };
 
   useMemo(() => {
-     groupdItems();
-  },[items]);
+    groupdItems();
+  }, [items]);
   return (
     <>
       <Text>hi basket</Text>

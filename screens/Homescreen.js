@@ -21,7 +21,7 @@ import Categories from "../Components/categories";
 import FeaturedRow from "../Components/featuredrow";
 
 const Homescreen = () => {
-  const localhst="192.168.167.254"
+  const localhst="172.20.10.2"
   const navigation = useNavigation();
   const [categories, setCategories] = useState([]);
   const [featuredRows, setfeaturedRows] = useState([]);
