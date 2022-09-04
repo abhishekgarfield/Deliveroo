@@ -1,17 +1,18 @@
 import { useNavigation } from "@react-navigation/native";
 import { useEffect } from "react";
 import { SafeAreaView, Text, View, Image } from "react-native";
+import * as Progress from "react-native-progress";
 
 import * as Animator from "react-native-animatable";
 
 const Prepairingorderscreen = () => {
-    const navigation=useNavigation();
+  const navigation = useNavigation();
 
-    useEffect(()=>{
-           setTimeout(()=>{
-                navigation.navigate("final");
-           },4000)
-    },[])
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate("final");
+    }, 400000);
+  }, []);
   return (
     <SafeAreaView
       style={{
@@ -24,10 +25,9 @@ const Prepairingorderscreen = () => {
         source={{
           uri: "https://media.giphy.com/media/gsr9MG7bDvSRWWSD1Y/giphy.gif",
         }}
-        
         animation="fadeInUp"
         iterationCount={1}
-        style={{height:400,width:400}}
+        style={{ height: 400, width: 400 }}
       />
       <Animator.Text
         iterationCount={1}
@@ -42,8 +42,9 @@ const Prepairingorderscreen = () => {
       >
         Waiting for restaurant to accept your order!
       </Animator.Text>
-      
-      
+      <View style={{flexDirection:"column",alignItems:"center"}}>
+      <Progress.Bar   indeterminate={true} color={"white"} width={300} style={{marginVertical:20}}/>
+      </View>
     </SafeAreaView>
   );
 };
