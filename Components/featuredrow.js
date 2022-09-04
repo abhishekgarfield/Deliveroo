@@ -18,7 +18,7 @@ const FeaturedRow = ({ item }) => {
 
   const getrestaurantData = async () => {
     try {
-      const response = await axios.get("http://172.20.10.2:8000/restaurant", {
+      const response = await axios.get("http://192.168.167.254:8000/restaurant", {
         params: {
           featured_id: item.featured_id,
         },

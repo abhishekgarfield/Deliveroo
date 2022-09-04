@@ -38,7 +38,7 @@ const Restaurantscreen = () => {
     });
   }, []);
   useEffect(()=>{
-    
+    dispatch(setRestaurant(restaurant))
   },)
 
   return (

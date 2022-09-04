@@ -16,6 +16,7 @@ app.get("/", async (req, res) => {
       $set: {
         dishes: [
           {
+            Dish_id:1,
             Dish_name: "Chicken",
             Dish_description:
               "Chicken is made up with hen and oils used for cooking delicious reciepe",
@@ -23,6 +24,7 @@ app.get("/", async (req, res) => {
             Dish_image: "https://links.papareact.com/gn7",
           },
           {
+            Dish_id:2,
             Dish_name: "Chikan masla",
             Dish_description:
               "Chicken is made up with hen and oils used for cooking delicious reciepe",
@@ -30,6 +32,7 @@ app.get("/", async (req, res) => {
             Dish_image: "https://links.papareact.com/gn7",
           },
           {
+            Dish_id:3,
             Dish_name: "Paneer masala",
             Dish_description:
               "Chicken is made up with hen and oils used for cooking delicious reciepe",
@@ -37,6 +40,7 @@ app.get("/", async (req, res) => {
             Dish_image: "https://links.papareact.com/gn7",
           },
           {
+            Dish_id:4,
             Dish_name: "Butter paneer",
             Dish_description:
               "Chicken is made up with hen and oils used for cooking delicious reciepe",
@@ -44,6 +48,7 @@ app.get("/", async (req, res) => {
             Dish_image: "https://links.papareact.com/gn7",
           },
           {
+            Dish_id:5,
             Dish_name: "Tikka",
             Dish_description:
               "Chicken is made up with hen and oils used for cooking delicious reciepe",
