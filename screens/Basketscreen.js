@@ -102,7 +102,7 @@ const Basketscreen = () => {
               flexDirection: "row",
               backgroundColor: "white",
               alignItems: "center",
-              padding: 5,
+              paddingVertical: 15,
               paddingHorizontal: 15,
             }}
           >
@@ -131,7 +131,7 @@ const Basketscreen = () => {
           </View>
         ))}
       </ScrollView>
-      <View style={{backgroundColor:"white",justifyContent:"space-between",paddingHorizontal:20,paddingVertical:20}}>
+      <View style={{backgroundColor:"white",justifyContent:"space-between",paddingHorizontal:20,paddingVertical:20,marginTop:10}}>
         <View style={{flexDirection:"row",paddingVertical:10}}>
           <Text style={{flexGrow:1,color:"grey"}}>Subtotal</Text>
           <Text style={{color:"grey"}}>{`₹${total}`}</Text>

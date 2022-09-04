@@ -13,6 +13,7 @@ export const basketSlice=createSlice(
         addtoBasket:(state,action)=>{
             state.items=[...state.items,action.payload];
 
+            console.log(state.items.map((item)=>item.Dish_name));
         },
         removeFromBasket:(state,action)=>{
            const index= state.items.findIndex((item)=>
@@ -24,6 +25,7 @@ export const basketSlice=createSlice(
             state.items.splice(index,1);
             }
             
+            console.log(state.items.map((item)=>item.Dish_name));
              
          }
     }
