@@ -11,7 +11,7 @@ const Prepairingorderscreen = () => {
   useEffect(() => {
     setTimeout(() => {
       navigation.navigate("final");
-    }, 400000);
+    }, 5000);
   }, []);
   return (
     <SafeAreaView

@@ -22,10 +22,10 @@ const Finalscreen = () => {
                 </TouchableOpacity>
                 <Text style={{color:"white",fontSize:20,fontWeight:"400"}}>Need help ?</Text>
             </View>
-            <View style={{flexDirection:"row",backgroundColor:"white",marginVertical:20,marginHorizontal:20,padding:10,borderRadius:5,justifyContent:"center",alignItems:"center"}}>
-            <View style={{flexGrow:1}}>
+            <View style={{flexDirection:"row",backgroundColor:"white",marginVertical:20,marginHorizontal:20,padding:15,borderRadius:5,justifyContent:"center",alignItems:"center"}}>
+            <View style={{paddingLeft:15}}>
                 <Text style={{color:"grey"}}>Estimated arrival</Text>
-                <Text style={{fontWeight:"bold",fontSize:40}}>45-50 Minutes</Text>
+                <Text style={{fontWeight:"bold",fontSize:30}}>45-50 Minutes</Text>
                 <Progress.Bar size={40} indeterminate={true} style={{marginVertical:5,color:"rgba(0,204,188,255)"}}  color="rgba(0,204,188,255)"/>
                 <Text>{`Your order at ${reataurantname} is being prepared`}</Text>
             </View>
