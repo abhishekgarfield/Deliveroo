@@ -6,6 +6,8 @@ import Restaurantscreen from "./screens/Restaurantscreen"
 import { Provider } from "react-redux";
 import { store } from "./store";
 import Basketscreen from "./screens/Basketscreen";
+import Prepairingorderscreen from "./screens/preparingorderscreen"
+import Finalscreen from "./screens/final";
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -17,6 +19,10 @@ export default function App() {
           <Stack.Screen name="restaurant" component={Restaurantscreen} />
           <Stack.Screen name="basketscreen" component={Basketscreen} 
           options={{presentation:"modal", headerShown:false}}/>
+          <Stack.Screen name="prepairingorder" component={Prepairingorderscreen}
+          options={{headerShown:false,presentation:"fullScreenModal"}}/>
+          <Stack.Screen name="final" component={Finalscreen}
+          options={{headerShown:false,presentation:"fullScreenModal"}}/>
         </Stack.Navigator>
       </Provider>
     </NavigationContainer>

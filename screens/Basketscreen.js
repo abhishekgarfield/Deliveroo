@@ -105,6 +105,7 @@ const Basketscreen = () => {
               paddingVertical: 15,
               paddingHorizontal: 15,
             }}
+            key={key}
           >
             <Text
               style={{ color: "rgba(0,204,188,255)", paddingHorizontal: 5 }}
@@ -123,7 +124,11 @@ const Basketscreen = () => {
               }}
             >
               <Text
-                style={{ color: "rgba(0,204,188,255)", paddingHorizontal: 5 ,fontSize:13 }}
+                style={{
+                  color: "rgba(0,204,188,255)",
+                  paddingHorizontal: 5,
+                  fontSize: 13,
+                }}
               >
                 Remove
               </Text>
@@ -131,21 +136,48 @@ const Basketscreen = () => {
           </View>
         ))}
       </ScrollView>
-      <View style={{backgroundColor:"white",justifyContent:"space-between",paddingHorizontal:20,paddingVertical:20,marginTop:10}}>
-        <View style={{flexDirection:"row",paddingVertical:10}}>
-          <Text style={{flexGrow:1,color:"grey"}}>Subtotal</Text>
-          <Text style={{color:"grey"}}>{`₹${total}`}</Text>
+      <View
+        style={{
+          backgroundColor: "white",
+          justifyContent: "space-between",
+          paddingHorizontal: 20,
+          paddingVertical: 20,
+          marginTop: 10,
+        }}
+      >
+        <View style={{ flexDirection: "row", paddingVertical: 10 }}>
+          <Text style={{ flexGrow: 1, color: "grey" }}>Subtotal</Text>
+          <Text style={{ color: "grey" }}>{`₹${total}`}</Text>
         </View>
-        <View style={{flexDirection:"row",paddingVertical:10}}>
-          <Text style={{flexGrow:1,color:"grey"}}>Delivery fee</Text>
-          <Text style={{color:"grey"}}>₹100</Text>
+        <View style={{ flexDirection: "row", paddingVertical: 10 }}>
+          <Text style={{ flexGrow: 1, color: "grey" }}>Delivery fee</Text>
+          <Text style={{ color: "grey" }}>₹100</Text>
         </View>
-        <View style={{flexDirection:"row",paddingVertical:10}}>
-          <Text style={{flexGrow:1}}>Subtotal</Text>
-          <Text>{`₹${total+100}`}</Text>
+        <View style={{ flexDirection: "row", paddingVertical: 10 }}>
+          <Text style={{ flexGrow: 1 }}>Subtotal</Text>
+          <Text>{`₹${total + 100}`}</Text>
         </View>
-        <TouchableOpacity style={{backgroundColor:"rgba(0,204,188,255)",borderRadius:13,marginVertical:12}}>
-              <Text style={{textAlign:"center",color:"white",padding:20,fontSize:20,fontWeight:"bold"}}>Place order</Text>
+        <TouchableOpacity
+          style={{
+            backgroundColor: "rgba(0,204,188,255)",
+            borderRadius: 13,
+            marginVertical: 12,
+          }}
+          onPress={() => {
+            navigation.navigate("prepairingorder");
+          }}
+        >
+          <Text
+            style={{
+              textAlign: "center",
+              color: "white",
+              padding: 20,
+              fontSize: 20,
+              fontWeight: "bold",
+            }}
+          >
+            Place order
+          </Text>
         </TouchableOpacity>
       </View>
     </>
