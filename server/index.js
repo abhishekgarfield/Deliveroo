@@ -17,7 +17,7 @@ app.get("/restaurant", async (req, res) => {
     const restaurants = database.collection("restaurants");
     const data = await restaurants
       .find({ featured_rowId: featured_id })
-      .sort({ featured_rowId: 1 })
+      .sort({ rating : -1 })
       .toArray();
     res.send(data);
   } catch (err) {

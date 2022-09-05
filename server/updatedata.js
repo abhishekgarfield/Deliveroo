@@ -21,7 +21,7 @@ app.get("/", async (req, res) => {
             Dish_description:
               "Chicken is made up with hen and oils used for cooking delicious reciepe",
             Price: "200",
-            Dish_image: "https://links.papareact.com/gn7",
+            Dish_image: "https://i.imgur.com/hPWXl2E.jpg",
           },
           {
             Dish_id:2,
@@ -29,7 +29,7 @@ app.get("/", async (req, res) => {
             Dish_description:
               "Chicken is made up with hen and oils used for cooking delicious reciepe",
             Price: "200",
-            Dish_image: "https://links.papareact.com/gn7",
+            Dish_image: "https://i.imgur.com/Ln2LBmg.jpg",
           },
           {
             Dish_id:3,
@@ -37,7 +37,7 @@ app.get("/", async (req, res) => {
             Dish_description:
               "Chicken is made up with hen and oils used for cooking delicious reciepe",
             Price: "200",
-            Dish_image: "https://links.papareact.com/gn7",
+            Dish_image: "https://i.imgur.com/RjbqzOk.jpg[/img]",
           },
           {
             Dish_id:4,
@@ -45,7 +45,7 @@ app.get("/", async (req, res) => {
             Dish_description:
               "Chicken is made up with hen and oils used for cooking delicious reciepe",
             Price: "200",
-            Dish_image: "https://links.papareact.com/gn7",
+            Dish_image: "https://i.imgur.com/k0f4vjB.jpg[/img]",
           },
           {
             Dish_id:5,
@@ -53,7 +53,7 @@ app.get("/", async (req, res) => {
             Dish_description:
               "Chicken is made up with hen and oils used for cooking delicious reciepe",
             Price: "200",
-            Dish_image: "https://links.papareact.com/gn7",
+            Dish_image: "https://i.imgur.com/MtitkQu.jpg[/img]",
           },
         ]
       }
