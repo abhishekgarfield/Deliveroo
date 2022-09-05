@@ -74,8 +74,8 @@ const Finalscreen = () => {
           initialRegion={{
             latitude: restaurant.lat,
             longitude: restaurant.long,
-            latitudeDelta: 0.05,
-            longitudeDelta: 0.05,
+            latitudeDelta: 0.005,
+            longitudeDelta: 0.005,
           }}
           mapType="mutedStandard"
           style={{ flexGrow: 1, zIndex: -1, marginTop: -50 }}
@@ -85,10 +85,12 @@ const Finalscreen = () => {
               latitude: restaurant.lat,
               longitude: restaurant.long,
             }}
-            description={restaurant.description}
-            title={restaurant.title}
+            title={restaurant.short_description}
+            description={restaurant.title}
+            
+          
             identifier="origin"
-            color="rgba(0,204,188,255)"
+            pinColor="rgba(0,204,188,255)"
           />
         </MapView>
         <SafeAreaView style={{backgroundColor:"white"}}>
