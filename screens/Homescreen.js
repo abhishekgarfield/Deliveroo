@@ -69,7 +69,7 @@ const Homescreen = () => {
             style={styles.dp}
           />
         </View>
-        <View style={{ paddingLeft: 5, flexGrow: 1 }}>
+        <View style={{ paddingLeft: 10, flexGrow: 1 }}>
           <Text style={styles.deliverText}>Deliver now !</Text>
           <Text style={styles.currentLocationtext}>
             Current location
@@ -139,25 +139,26 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   dp: {
-    height: 35,
-    width: 35,
-    padding: 4,
+    height: 40,
+    width: 40,
+    padding: 5,
     backgroundColor: "lightgrey",
     borderRadius: 50,
   },
   header: {
     flexDirection: "row",
     justifyContent: "center",
-    paddingHorizontal: 5,
+    paddingHorizontal: 8,
+    paddingVertical:5
   },
   deliverText: {
-    fontSize: 10,
+    fontSize: 12,
     fontWeight: "bold",
     color: "lightgrey",
   },
   currentLocationtext: {
     fontWeight: "bold",
-    fontSize: 15,
+    fontSize: 18,
     alignItems: "center",
   },
 });
