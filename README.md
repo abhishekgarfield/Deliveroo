@@ -1,43 +1,45 @@
-# My Universal React Project
+# Deliveroo app
 
-<p>
-  <!-- iOS -->
-  <a href="https://itunes.apple.com/app/apple-store/id982107779">
-    <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  </a>
-  <!-- Android -->
-  <a href="https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample">
-    <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-  </a>
-  <!-- Web -->
-  <a href="https://docs.expo.dev/workflow/web/">
-    <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
-  </a>
-</p>
+This is a deiveroo app clone (android + ios).
 
-## 🚀 How to use
+About deliveroo : It is a food delivery app in UK .
 
-- Install packages with `yarn` or `npm install`.
-  - If you have native iOS code run `npx pod-install`
-- Run `yarn start` or `npm run start` to start the bundler.
-- Open the project in a React runtime to try it:
-  - iOS: [Client iOS](https://itunes.apple.com/app/apple-store/id982107779)
-  - Android: [Client Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample)
-  - Web: Any web browser
+Technologies : React native , Expressjs , Nodejs ,Mongodb 
 
-## Running/Modifying Native Code
+# 1) App homescreen 
+ Contains all the restaurants with featured rows
 
-You can generate native iOS and Android projects from your Expo config file (**app.json**/ **app.config.js**) by runnning `npx expo prebuild`. These native projects can then be compiled and run via XCode and Android Studio.
+<img width="351" alt="Screenshot 2022-09-05 at 11 12 04 AM" src="https://user-images.githubusercontent.com/49722470/188369120-cdca56c3-c29c-4c3a-a48b-2465daac62d9.png">
 
-> 💡 Learn more about [native code in Expo](https://docs.expo.dev/workflow/customizing/)
+# 2) Restaurant screen
+Contains information abour restaurant and also restaurant menu
 
-## Publishing
+<img width="351" alt="Screenshot 2022-09-05 at 11 12 17 AM" src="https://user-images.githubusercontent.com/49722470/188369260-7a99edae-69ce-468d-a2d7-b8671b7618bf.png">
 
-- Deploy the native app to the App store and Play store using this guide: [Deployment](https://docs.expo.dev/distribution/app-stores/).
-- Deploy the website using this guide: [Web deployment](https://docs.expo.dev/distribution/publishing-websites/).
+# 2) Menu section
+Contains Menu of restaurant
 
-## 📝 Notes
+<img width="351" alt="Screenshot 2022-09-05 at 11 12 24 AM" src="https://user-images.githubusercontent.com/49722470/188369316-98307979-2aa9-494c-a4ed-7b8f1d3f189d.png">
 
-- Learn more about [Universal React](https://docs.expo.dev/).
-- See what API and components are [available in the React runtimes](https://docs.expo.dev/versions/latest/).
-- Find out more about developing apps and websites: [Guides](https://docs.expo.dev/guides/).
+# 2) Basketicon popup
+As soom as you add items to card there would be a basket pop up
+
+<img width="351" alt="Screenshot 2022-09-05 at 11 12 34 AM" src="https://user-images.githubusercontent.com/49722470/188369401-52dba63c-6250-4c3c-b5d8-f088df9e86fc.png">
+
+# 2) Basket  screen
+Contains all teh items added to basket for checkout. You can also delete items from this screen.
+
+<img width="351" alt="Screenshot 2022-09-05 at 11 12 49 AM" src="https://user-images.githubusercontent.com/49722470/188369533-d916362f-313e-42cd-97c0-57e6de33f2db.png">
+
+# 2) Order placing screen
+This is a animated screen til the time your order is being prepaired
+
+<img width="351" alt="Screenshot 2022-09-05 at 11 12 53 AM" src="https://user-images.githubusercontent.com/49722470/188369679-35824f10-4d3c-4db0-bd51-32456b1d7523.png">
+
+# 2) Final delivery screen
+Contains delivery information with map
+
+<img width="351" alt="Screenshot 2022-09-05 at 11 13 04 AM" src="https://user-images.githubusercontent.com/49722470/188369698-d2fe7408-a42e-4e15-9b8d-987ec871be41.png">
+
+
+
